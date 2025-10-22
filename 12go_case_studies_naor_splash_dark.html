@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Naor Yanko — Product Design Case Studies for 12Go</title>
+<meta name="description" content="Three focused case studies with a short intro splash and theme toggle."/>
+<style>
+  :root{
+    --bg:#ffffff; --fg:#111111; --muted:#6b7280; --line:#e5e7eb;
+    --card:#ffffff; --pill:#ffffff; --btn:#ffffff; --shadow:0 1px 2px rgba(0,0,0,.08);
+  }
+  :root[data-theme="dark"]{
+    --bg:#0b0b0b; --fg:#eeeeee; --muted:#9aa1ad; --line:#1f2937;
+    --card:#121212; --pill:#161616; --btn:#111111; --shadow:0 1px 2px rgba(0,0,0,.5);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--fg)}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:40px 20px}
+  header{text-align:center;border-bottom:1px solid var(--line);padding-bottom:28px}
+  header h1{font-size:clamp(28px,4vw,44px);margin:6px 0 10px}
+  header p{color:var(--muted);max-width:760px;margin:0 auto}
+  .top-actions{display:flex;gap:10px;justify-content:center;align-items:center;margin-top:16px;flex-wrap:wrap}
+  .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:26px 0 0}
+  .tab-btn{border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:var(--pill);cursor:pointer;font-size:14px;box-shadow:var(--shadow)}
+  .tab-btn[aria-selected="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+  section{margin-top:28px}
+  .frame{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+  iframe{width:100%;height:520px;border:0;background:var(--card)}
+  .frame-foot{position:absolute;left:0;right:0;bottom:0;display:flex;gap:10px;justify-content:space-between;align-items:center;padding:10px 12px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%, rgba(0,0,0,0.0) 35%, var(--card) 100%);font-size:13px;color:var(--muted)}
+  .btn{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);padding:8px 12px;border-radius:12px;background:var(--btn);text-decoration:none;color:var(--fg);box-shadow:var(--shadow)}
+  .card{border:1px solid var(--line);border-radius:16px;padding:18px;background:var(--card);box-shadow:var(--shadow)}
+  .grid{display:grid;gap:18px}
+  @media (min-width:860px){.grid-2{grid-template-columns:1fr 1fr}}
+  ul{margin:10px 0 0;padding-left:20px}
+  li{margin:8px 0}
+  footer{border-top:1px solid var(--line);margin-top:36px;padding:18px 0;text-align:center;color:var(--muted);font-size:14px}
+  /* Splash */
+  .splash{position:fixed;inset:0;background:#000;color:#fff;display:flex;align-items:center;justify-content:center;z-index:9999}
+  .splash .title{font-size:clamp(36px,6vw,72px);font-weight:700;text-align:center}
+  .splash .note{color:#9ca3af;text-align:center;margin-top:6px}
+  .bar{width:260px;height:10px;border-radius:12px;background:rgba(255,255,255,.15);margin:18px auto 0;overflow:hidden}
+  .bar>div{height:100%;width:33%;background:#fff;animation:load 5s linear forwards}
+  @keyframes load{0%{transform:translateX(-100%)}100%{transform:translateX(200%)}}
+  .hide{display:none}
+</style>
+</head>
+<body>
+<div id="splash" class="splash" role="status" aria-live="polite">
+  <div>
+    <div style="letter-spacing:.25em;text-transform:uppercase;color:#9ca3af;text-align:center;font-size:12px">Naor Yanko · Product Designer</div>
+    <div id="phrase" class="title">Shaping product systems</div>
+    <div class="note">Preparing the showcase…</div>
+    <div class="bar"><div></div></div>
+  </div>
+</div>
+
+<div id="app" class="wrap" aria-hidden="true">
+  <header>
+    <div style="letter-spacing:0.1em;color:var(--muted);font-size:12px;text-transform:uppercase">Naor Yanko · Product Designer</div>
+    <h1>Product Design Case Studies for 12Go</h1>
+    <p>A closer look at how I approach discovery, UX complexity, and insight‑driven iteration — translated into three live examples you can explore directly.</p>
+    <div class="top-actions">
+      <a class="btn" id="portfolio-link" target="_blank" rel="noreferrer" href="https://yankodesigncoil.wixstudio.com/yankodesignuxui">Portfolio ↗</a>
+      <button class="btn" id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Case study categories">
+      <button class="tab-btn" role="tab" id="t1" aria-selected="true" data-target="arena">End‑to‑End Product</button>
+      <button class="tab-btn" role="tab" id="t2" aria-selected="false" data-target="buzz">Complex UX Flow</button>
+      <button class="tab-btn" role="tab" id="t3" aria-selected="false" data-target="friend">Insight‑Driven</button>
+    </div>
+  </header>
+
+  <!-- Sections (Arena, BuzzonChat, FriendLine) are identical to previous message for brevity; omitted here due to length.
+       They include frames, process, problem/approach/flow/research/next blocks, and footer. -->
+</div>
+
+<script>
+  // Inject sections content (to keep this message shorter)
+  document.getElementById('app').insertAdjacentHTML('beforeend', `
+<section id="arena" role="tabpanel" aria-labelledby="t1" >
+  <div class="frame">
+    <iframe loading="lazy" sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+            referrerpolicy="no-referrer"
+            src="https://arena-ai-v02-copy-fdbcb02f.base44.app/"
+            title="Arena AI — Real‑Estate Discovery to Live MVP"></iframe>
+    <div class="frame-foot">
+      <span>If the preview is blocked by the site’s security policy, open it directly.</span>
+      <a class="btn" target="_blank" rel="noreferrer" href="https://arena-ai-v02-copy-fdbcb02f.base44.app/">Open live</a>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <h2 style="margin:0 0 6px">Arena AI — Real‑Estate Discovery to Live MVP</h2>
+    <p style="color:var(--muted)">Arena AI is a real‑estate intelligence platform helping buyers and agents connect through a conversational discovery journey. The goal was to transform fragmented property data into a structured, chat‑driven experience that feels human and responsive.</p>
+    <div class="grid grid-2" style="margin-top:12px">
+      <div>
+        <h3 style="margin:0 0 6px">Process</h3>
+        <ul><li>Problem → Users struggled to explore relevant properties quickly due to inconsistent metadata across sources.</li><li>Approach → Adaptive conversational layer translating natural input into structured AEO search queries.</li><li>Design → Modular dashboard with progressive filters and semantic highlights.</li><li>Outcome → Production MVP enabling property matching and agent handoff in under two months.</li></ul>
+        <div style="margin-top:12px">
+          <a class="btn" target="_blank" rel="noreferrer" href="https://arena-ai-v02-copy-fdbcb02f.base44.app/">Live Demo</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin:0 0 6px">Problem & Constraints</h3>
+        <p>Real‑estate sites often overwhelm users with listings but no guidance. Arena reimagines discovery by making the system ask the right questions — “Where do you want to wake up?” instead of endless filters.</p>
+        <h3 style="margin:14px 0 6px">Approach & Reasoning</h3>
+        <p>I structured the flow as a chat‑based funnel backed by an AEO JSON layer connecting intents to structured data. Wireframes evolved through three usability rounds.</p>
+        <h3 style="margin:14px 0 6px">Flow (Example)</h3>
+        <ol style="padding-left:20px;margin:8px 0"><li>Entry: user lands and answers 2–4 intent questions.</li><li>Guidance: system suggests next best action with inline education.</li><li>Decision: user compares options with 2–3 key differentiators highlighted.</li><li>Commit: clear primary action with safeguards for edge cases.</li><li>Follow‑up: success state with “what happens next” and tracking hook.</li></ol>
+        <h3 style="margin:14px 0 6px">Research Notes (Sample)</h3>
+        <ul style="padding-left:20px;margin:8px 0"><li>Qualitative: 5–15 interviews, themes: clarity, control, reassurance.</li><li>Usability: 3 iterative rounds; reduced misclicks on CTAs.</li><li>Content: microcopy tests; tone = calm, direct, reassuring.</li></ul>
+        <h3 style="margin:14px 0 6px">What I’d Do Next</h3>
+        <p>Add agent‑side analytics and context‑aware recommendations to shorten negotiation cycles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="buzz" role="tabpanel" aria-labelledby="t2" hidden>
+  <div class="frame">
+    <iframe loading="lazy" sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+            referrerpolicy="no-referrer"
+            src="https://www.buzzonchat.com/"
+            title="BuzzonChat — AI‑Driven Checkout &amp; Subscription Logic"></iframe>
+    <div class="frame-foot">
+      <span>If the preview is blocked by the site’s security policy, open it directly.</span>
+      <a class="btn" target="_blank" rel="noreferrer" href="https://www.buzzonchat.com/">Open live</a>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <h2 style="margin:0 0 6px">BuzzonChat — AI‑Driven Checkout &amp; Subscription Logic</h2>
+    <p style="color:var(--muted)">BuzzonChat automates GSO for Shopify merchants. The challenge was a multi‑tier checkout and subscription experience that balances transparency, flexibility, and simplicity.</p>
+    <div class="grid grid-2" style="margin-top:12px">
+      <div>
+        <h3 style="margin:0 0 6px">Process</h3>
+        <ul><li>Problem → Merchants were confused by complex usage tiers and unpredictable billing.</li><li>Approach → Visual plan cards tied to product count and usage tokens.</li><li>Design → Three clear steps with contextual tooltips and inline validation.</li><li>Outcome → Reduced friction and prepared the foundation for automated onboarding.</li></ul>
+        <div style="margin-top:12px">
+          <a class="btn" target="_blank" rel="noreferrer" href="https://www.buzzonchat.com/">Live Site</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin:0 0 6px">Problem & Constraints</h3>
+        <p>SaaS billing complexity was causing hesitation. The goal was to craft pricing and checkout that build trust and reduce cognitive load.</p>
+        <h3 style="margin:14px 0 6px">Approach & Reasoning</h3>
+        <p>Mapped journeys from free scan to paid upgrade, with edge cases like failed renewals, proration, and credits. Prototypes tested with 6 merchants via Loom walkthroughs.</p>
+        <h3 style="margin:14px 0 6px">Flow (Example)</h3>
+        <ol style="padding-left:20px;margin:8px 0"><li>Scan: merchant connects store and runs a free scan on 3–5 products.</li><li>Educate: show scorecards and explain AI improvements.</li><li>Choose: plan recommendation based on product count and usage.</li><li>Pay: clean, minimal checkout with trust marks and proration clarity.</li><li>Onboard: show “what’s next” and first-win checklist.</li></ol>
+        <h3 style="margin:14px 0 6px">Research Notes (Sample)</h3>
+        <ul style="padding-left:20px;margin:8px 0"><li>Merchant interviews (n=6): pricing clarity and support expectations.</li><li>Prototype tests: reduced validation errors; faster plan selection.</li><li>Content: aligned tone with Shopify’s UI patterns to reduce friction.</li></ul>
+        <h3 style="margin:14px 0 6px">What I’d Do Next</h3>
+        <p>AI‑guided plan recommender + progress dashboard visualizing GSO improvements over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="friend" role="tabpanel" aria-labelledby="t3" hidden>
+  <div class="frame">
+    <iframe loading="lazy" sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+            referrerpolicy="no-referrer"
+            src="https://friendline-413bf.web.app/home"
+            title="FriendLine — Emotional AI for Seniors (Feedback‑Led)"></iframe>
+    <div class="frame-foot">
+      <span>If the preview is blocked by the site’s security policy, open it directly.</span>
+      <a class="btn" target="_blank" rel="noreferrer" href="https://friendline-413bf.web.app/home">Open live</a>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <h2 style="margin:0 0 6px">FriendLine — Emotional AI for Seniors (Feedback‑Led)</h2>
+    <p style="color:var(--muted)">Voice companion connecting seniors with family through weekly AI‑assisted calls. The focus: designing empathy into automation — clarity, warmth, and safety in every interaction.</p>
+    <div class="grid grid-2" style="margin-top:12px">
+      <div>
+        <h3 style="margin:0 0 6px">Process</h3>
+        <ul><li>Problem → Seniors often feel isolated and overwhelmed by complex tech interfaces.</li><li>Approach → Voice‑first flows based on caregiver interviews and emotional mapping.</li><li>Design → Calm visuals with audio cues, daily summaries, and privacy‑first consent flows.</li><li>Outcome → Increased engagement and family involvement in care routines.</li></ul>
+        <div style="margin-top:12px">
+          <a class="btn" target="_blank" rel="noreferrer" href="https://friendline-413bf.web.app/home">Live App</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin:0 0 6px">Problem & Constraints</h3>
+        <p>Elder users felt technology was talking at them, not with them. FriendLine humanizes automation by giving the interface emotional texture.</p>
+        <h3 style="margin:14px 0 6px">Approach & Reasoning</h3>
+        <p>Combined qualitative research (15 caregiver interviews) with sprints focused on tone calibration. Every microcopy validated for empathy and simplicity.</p>
+        <h3 style="margin:14px 0 6px">Flow (Example)</h3>
+        <ol style="padding-left:20px;margin:8px 0"><li>Onboard: add elder profile with interests and preferred times.</li><li>Schedule: recurring calls with gentle reminders.</li><li>Call: natural prompts; respectful pacing; clear confirmations.</li><li>Summarize: short digest to family; opt-in data view for privacy.</li><li>Improve: weekly feedback loop to adjust tone and topics.</li></ol>
+        <h3 style="margin:14px 0 6px">Research Notes (Sample)</h3>
+        <ul style="padding-left:20px;margin:8px 0"><li>Caregiver interviews (n=15): loneliness, simplicity, trust.</li><li>Copy tests: “warm + clear” phrasing improved understanding.</li><li>Ethics: consent-first design; accessible audio cues.</li></ul>
+        <h3 style="margin:14px 0 6px">What I’d Do Next</h3>
+        <p>Multilingual voices and mood tracking through conversational cues.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>© 2025 Naor Yanko · <a href="https://yankodesigncoil.wixstudio.com/yankodesignuxui" target="_blank" rel="noreferrer">Portfolio</a></footer>`);
+
+  // Splash: 5s with rotating phrases
+  const phrases = ["Shaping product systems","From discovery to delivery","Complex UX, measurable impact"];
+  let i = 0;
+  const phraseEl = document.getElementById('phrase');
+  const rot = setInterval(()=>{ i=(i+1)%phrases.length; phraseEl.textContent = phrases[i]; }, 900);
+  setTimeout(function(){ 
+    clearInterval(rot);
+    document.getElementById('splash').classList.add('hide'); 
+    document.getElementById('app').removeAttribute('aria-hidden');
+  }, 5000);
+
+  // Theme toggle with localStorage
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+  const saved = localStorage.getItem('theme');
+  if(saved){ root.setAttribute('data-theme', saved); toggle.setAttribute('aria-pressed', saved==='dark'); toggle.textContent = saved==='dark' ? 'Light mode' : 'Dark mode'; }
+  toggle.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme') || 'light';
+    const next = current === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    toggle.setAttribute('aria-pressed', next==='dark');
+    toggle.textContent = next==='dark' ? 'Light mode' : 'Dark mode';
+  });
+
+  // Simple tabs
+  const buttons = document.querySelectorAll('.tab-btn');
+  const panels = {};
+  // Panels are inside injected sections:
+  const updatePanels = () => {
+    panels['arena'] = document.getElementById('arena');
+    panels['buzz'] = document.getElementById('buzz');
+    panels['friend'] = document.getElementById('friend');
+  };
+  updatePanels();
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.setAttribute('aria-selected','false'));
+      btn.setAttribute('aria-selected','true');
+      Object.values(panels).forEach(p => p.hidden = true);
+      panels[btn.dataset.target].hidden = false;
+    });
+  });
+</script>
+</body>
+</html>
