@@ -1,0 +1,167 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Naor Yanko — Product Design Case Studies for 12Go</title>
+  <meta name="description" content="Three focused case studies: end-to-end product, complex UX flow, and insight-driven design." />
+  <style>
+    :root{
+      --fg:#111; --muted:#6b7280; --line:#e5e7eb; --bg:#fff;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--fg);background:var(--bg);}
+    .wrap{max-width:1120px;margin:0 auto;padding:40px 20px}
+    header{text-align:center;border-bottom:1px solid var(--line);padding-bottom:28px}
+    header h1{font-size:clamp(28px,4vw,44px);margin:6px 0 10px}
+    header p{color:var(--muted);max-width:760px;margin:0 auto}
+    .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:26px 0 0}
+    .tab-btn{border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:#fff;cursor:pointer;font-size:14px}
+    .tab-btn[aria-selected="true"]{background:#111;color:#fff;border-color:#111}
+    section{margin-top:28px}
+    .frame{position:relative;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+    iframe{width:100%;height:520px;border:0;background:#fff}
+    .frame-foot{position:absolute;left:0;right:0;bottom:0;display:flex;gap:10px;justify-content:space-between;align-items:center;padding:10px 12px;background:linear-gradient(180deg,rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 35%, #fff 100%);font-size:13px;color:var(--muted)}
+    .btn{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);padding:8px 12px;border-radius:12px;background:#fff;text-decoration:none;color:#111}
+    .card{border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+    .grid{display:grid;gap:18px}
+    @media (min-width:860px){.grid-2{grid-template-columns:1fr 1fr}}
+    ul{margin:10px 0 0;padding-left:20px}
+    li{margin:8px 0}
+    footer{border-top:1px solid var(--line);margin-top:36px;padding:18px 0;text-align:center;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div style="letter-spacing:0.1em;color:var(--muted);font-size:12px;text-transform:uppercase">Naor Yanko · Product Designer</div>
+      <h1>Product Design Case Studies for 12Go</h1>
+      <p>A closer look at how I approach discovery, UX complexity, and insight‑driven iteration — translated into three live examples you can explore directly.</p>
+      <div class="tabs" role="tablist" aria-label="Case study categories">
+        <button class="tab-btn" role="tab" id="t1" aria-selected="true" data-target="arena">End‑to‑End Product</button>
+        <button class="tab-btn" role="tab" id="t2" aria-selected="false" data-target="buzz">Complex UX Flow</button>
+        <button class="tab-btn" role="tab" id="t3" aria-selected="false" data-target="friend">Insight‑Driven</button>
+      </div>
+    </header>
+
+    <!-- ARENA -->
+    <section id="arena" role="tabpanel" aria-labelledby="t1">
+      <div class="frame">
+        <iframe loading="lazy" sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+                referrerpolicy="no-referrer"
+                src="https://arena-ai-v02-copy-fdbcb02f.base44.app/"
+                title="Arena AI — Real‑Estate Discovery to Live MVP"></iframe>
+        <div class="frame-foot">
+          <span>If the preview is blocked by the site’s security policy, open it directly.</span>
+          <a class="btn" target="_blank" rel="noreferrer" href="https://arena-ai-v02-copy-fdbcb02f.base44.app/">Open live</a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h2 style="margin:0 0 6px">Arena AI — Real‑Estate Discovery to Live MVP</h2>
+        <p style="color:var(--muted)">Arena AI is a real‑estate intelligence platform helping buyers and agents connect through a conversational discovery journey. The goal was to transform fragmented property data into a structured, chat‑driven experience that feels human and responsive.</p>
+        <div class="grid grid-2" style="margin-top:12px">
+          <div>
+            <h3 style="margin:0 0 6px">Process</h3>
+            <ul>
+              <li>Problem → Users struggled to explore relevant properties quickly due to inconsistent metadata across sources.</li>
+              <li>Approach → Adaptive conversational layer translating natural input into structured AEO search queries.</li>
+              <li>Design → Modular dashboard with progressive filters and semantic highlights.</li>
+              <li>Outcome → Production MVP enabling property matching and agent handoff in under two months.</li>
+            </ul>
+            <div style="margin-top:12px">
+              <a class="btn" target="_blank" rel="noreferrer" href="https://arena-ai-v02-copy-fdbcb02f.base44.app/">Live Demo</a>
+            </div>
+          </div>
+          <div>
+            <h3 style="margin:0 0 6px">Problem & Constraints</h3>
+            <p>Real‑estate sites often overwhelm users with listings but no guidance. Arena reimagines discovery by making the system ask the right questions — “Where do you want to wake up?” instead of endless filters.</p>
+            <h3 style="margin:14px 0 6px">Approach & Reasoning</h3>
+            <p>I structured the flow as a chat‑based funnel backed by an AEO JSON layer connecting intents to structured data. Wireframes evolved through three usability rounds.</p>
+            <h3 style="margin:14px 0 6px">What I’d Do Next</h3>
+            <p>Add agent‑side analytics and context‑aware recommendations to shorten negotiation cycles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUZZONCHAT -->
+    <section id="buzz" role="tabpanel" aria-labelledby="t2" hidden>
+      <div class="frame">
+        <iframe loading="lazy" sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+                referrerpolicy="no-referrer"
+                src="https://www.buzzonchat.com/"
+                title="BuzzonChat — AI‑Driven Checkout & Subscription Logic"></iframe>
+        <div class="frame-foot">
+          <span>If the preview is blocked by the site’s security policy, open it directly.</span>
+          <a class="btn" target="_blank" rel="noreferrer" href="https://www.buzzonchat.com/">Open live</a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h2 style="margin:0 0 6px">BuzzonChat — AI‑Driven Checkout & Subscription Logic</h2>
+        <p style="color:var(--muted)">BuzzonChat automates GSO for Shopify merchants. The challenge was a multi‑tier checkout and subscription experience that balances transparency, flexibility, and simplicity.</p>
+        <div class="grid grid-2" style="margin-top:12px">
+          <div>
+            <h3 style="margin:0 0 6px">Process</h3>
+            <ul>
+              <li>Problem → Merchants were confused by complex usage tiers and unpredictable billing.</li>
+              <li>Approach → Visual plan cards tied to product count and usage tokens.</li>
+              <li>Design → Three clear steps with contextual tooltips and inline validation.</li>
+              <li>Outcome → Reduced friction and prepared the foundation for automated onboarding.</li>
+            </ul>
+            <div style="margin-top:12px">
+              <a class="btn" target="_blank" rel="noreferrer" href="https://www.buzzonchat.com/">Live Site</a>
+            </div>
+          </div>
+          <div>
+            <h3 style="margin:0 0 6px">Problem & Constraints</h3>
+            <p>SaaS billing complexity was causing hesitation. The goal was to craft pricing and checkout that build trust and reduce cognitive load.</p>
+            <h3 style="margin:14px 0 6px">Approach & Reasoning</h3>
+            <p>Mapped journeys from free scan to paid upgrade, with edge cases like failed renewals, proration, and credits. Prototypes tested with 6 merchants via Loom walkthroughs.</p>
+            <h3 style="margin:14px 0 6px">What I’d Do Next</h3>
+            <p>AI‑guided plan recommender and a progress dashboard that visualizes GSO improvements over time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRIENDLINE -->
+    <section id="friend" role="tabpanel" aria-labelledby="t3" hidden>
+      <div class="frame">
+        <iframe loading="lazy" sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+                referrerpolicy="no-referrer"
+                src="https://friendline-413bf.web.app/home"
+                title="FriendLine — Emotional AI for Seniors (Feedback‑Led)"></iframe>
+        <div class="frame-foot">
+          <span>If the preview is blocked by the site’s security policy, open it directly.</span>
+          <a class="btn" target="_blank" rel="noreferrer" href="https://friendline-413bf.web.app/home">Open live</a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h2 style="margin:0 0 6px">FriendLine — Emotional AI for Seniors (Feedback‑Led)</h2>
+        <p style="color:var(--muted)">Voice companion connecting seniors with family through weekly AI‑assisted calls. The focus: designing empathy into automation — clarity, warmth, and safety in every interaction.</p>
+        <div class="grid grid-2" style="margin-top:12px">
+          <div>
+            <h3 style="margin:0 0 6px">Process</h3>
+            <ul>
+              <li>Problem → Seniors often feel isolated and overwhelmed by complex tech interfaces.</li>
+              <li>Approach → Voice‑first flows based on caregiver interviews and emotional mapping.</li>
+              <li>Design → Calm visuals with audio cues, daily summaries, and privacy‑first consent flows.</li>
+              <li>Outcome → Increased engagement and family involvement in care routines.</li>
+            </ul>
+            <div style="margin-top:12px">
+              <a class="btn" target="_blank" rel="noreferrer" href="https://friendline-413bf.web.app/home">Live App</a>
+            </div>
+          </div>
+          <div>
+            <h3 style="margin:0 0 6px">Problem & Constraints</h3>
+            <p>Elder users felt technology was talking at them, not with them. FriendLine humanizes automation by giving the interface emotional texture.</p>
+            <h3 style="margin:14px 0 6px">Approach & Reasoning</h3>
+            <p>Combined qualitative research (15 caregiver interviews) with sprints focused on tone calibration. Every microcopy validated for empathy and simplicity.</p>
+            <h3 style="margin:14px 0 6px">What I’d Do Next</h3>
+            <p>Multilingual voices and mood tracking through conversational cues.</p>
+          </div>\n        </div>\n      </div>\n    </section>\n\n    <footer>\n      © 2025 Naor Yanko · <a href=\"https://yankodesigncoil.wixstudio.com/yankodesignuxui\" target=\"_blank\" rel=\"noreferrer\">Portfolio</a>\n    </footer>\n  </div>\n\n  <script>\n    // Simple tab logic without frameworks\n    const tabs = document.querySelectorAll('.tab-btn');\n    const panels = { arena: document.getElementById('arena'), buzz: document.getElementById('buzz'), friend: document.getElementById('friend') };\n    tabs.forEach(btn=>{\n      btn.addEventListener('click', ()=>{\n        tabs.forEach(b=>b.setAttribute('aria-selected','false'));\n        btn.setAttribute('aria-selected','true');\n        Object.values(panels).forEach(p=>p.hidden = true);\n        panels[btn.dataset.target].hidden = false;\n      });\n    });\n  </script>\n</body>\n</html>\n
